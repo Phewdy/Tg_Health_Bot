@@ -15,10 +15,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp -r dist/* public/",
     "start": "node dist/bot.js",
     "dev": "nodemon src/bot.ts",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist public && mkdir public"
   },
   "dependencies": {
     "abort-controller": "^3.0.0",
