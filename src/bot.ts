@@ -1,4 +1,7 @@
 import {Context, Telegraf} from 'telegraf';
+import {startCommand} from './commands/start.ts';
+import {helpCommand} from './commands/help.ts';
+
 // @ts-ignore
 import { BOT_KEY } from "./config/env.ts";
 
@@ -6,12 +9,12 @@ const bot = new Telegraf(BOT_KEY!);
 
 // Comandă de start
 bot.start((ctx: Context) => {
-  ctx.reply('Bun venit! 👋\nSunt bot-ul tău personal.');
+  startCommand(ctx);
 });
 
 // Comandă de help
 bot.help((ctx: Context) => {
-  ctx.reply('Comenzi disponibile:\n/start - Pornește bot-ul\n/help - Afișează ajutorul');
+  helpCommand(ctx);
 });
 
 // Răspuns la mesaje text
