@@ -1,5 +1,7 @@
 import {Context, Telegraf} from 'telegraf';
+// @ts-ignore
 import {startCommand} from './commands/start.ts';
+// @ts-ignore
 import {helpCommand} from './commands/help.ts';
 
 // @ts-ignore
